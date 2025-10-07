@@ -1,15 +1,13 @@
 import numpy as np
+import random
+import matplotlib.pyplot as plt
 from utils.data_loader import load_data
 from utils.plots import plot_history, plot_confusion_matrix, data_distribution, sample_images
 from models.skinlesnet_model import skinlesnet
 from tensorflow.keras.optimizers import Adam
 
+from config import BATCH_SIZE, EPOCHS, IMAGE_SIZE, DIRECTORY, CATEGORIES, LEARNING_RATE
 
-# Configuration
-DIRECTORY = "data/"    # Put dataset in the data folder and path here.....!!!!
-CATEGORIES = ['melanoma', 'nevus', 'seborrheic_keratosis']   # Sub directories in the main data folder
-BATCH_SIZE = 32
-EPOCHS = 100
 
 
 
@@ -28,7 +26,7 @@ sample_images(X_train, y_train, CATEGORIES)
 
 # Build and compile model
 model = skinlesnet()
-model.compile(optimizer=Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=Adam(learning_rate=LEARNING_RATE), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # Train
 history = model.fit(X_train, y_train, validation_data=(X_test, y_test),
@@ -45,3 +43,32 @@ plot_confusion_matrix(y_test, y_pred, CATEGORIES)
 
 # Save model
 model.save("models/skinlesnet_model.h5")
+
+
+# Test the model
+print("##############----Testing the Model----##############\n")
+
+idx2 = random.randint(0, len(y_test))
+
+test_img = X_test[idx2, :]
+test_label = y_test[idx2]
+
+y_pred = model.predict(X_test[idx2,:].reshape(1, IMAGE_SIZE, IMAGE_SIZE, 3))
+y_pred = np.argmax(y_pred)
+
+if (y_pred == 0):
+    pred = 'Melanoma'
+elif (y_pred == 1):
+    pred = 'Nevus'
+else:
+    pred = 'Seborrheic Keratosis'
+ 
+if (test_label == 0):
+    plt.title("Actual Image: Melanoma" +"\nModel Prediction: " + str(pred))
+elif (test_label == 1):
+    plt.title("Actual Image: Nevus" +"\nModel Prediction: " + str(pred))
+else:
+    plt.title("Actual Image: Seborrheic Keratosis" +"\nModel Prediction: " + str(pred))
+        
+plt.imshow(test_img)
+plt.show

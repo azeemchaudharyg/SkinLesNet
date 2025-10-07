@@ -2,8 +2,9 @@ import os
 import cv2
 import numpy as np
 from sklearn.model_selection import train_test_split
+from config import IMAGE_SIZE
 
-def load_data(directory, categories, image_size=224):
+def load_data(directory, categories, image_size=IMAGE_SIZE):
     data = []
     
     for category in categories:
