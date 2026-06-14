@@ -57,3 +57,86 @@ conda activate skinlesnet
 pip install tensorflow==2.4.1 keras==2.4.3
 pip install scikit-learn pandas numpy matplotlib opencv-python
 ```
+
+---
+
+## Datasets
+The research utilizes a modified **PAD-UFES-20** dataset containing clinical images and patient records from Brazil, which inherently presents realistic challenges like varying resolutions, sizes, and lighting conditions.
+
+**Pre-processing Standards:** To address the critical clinical risk of melanoma misclassification, 1,314 skin lesion images were standardized to 224 x 224 pixels and partitioned into distinct training and testing cohorts.
+
+**Data Augmentation:** To mitigate severe class imbalances and data limitations, geometric data augmentation (random flips, rotations, and translations) was applied, expanding the final balanced evaluation pool to 520 melanoma, 408 nevus, and 386 seborrheic keratosis images.
+
+<p align="center">
+  <img src="utils/dist.png" alt="SkinLesNet Architecture Diagram" width="800"><br>
+  <em>Proposed multi-layer deep CNN model architecture to classify different skin lesion categories.</em>
+</p>
+
+To further validate generalizability, the primary study was augmented with two widely benchmarked, public dermatoscopic databases: **HAM10000** and **ISIC2017**.
+
+The HAM10000 repository provides 10,015 high-resolution dermatoscopic images tracking critical lesion variations, including basal-cell carcinoma, squamous-cell carcinoma, seborrheic keratosis, melanoma, and nevi. ISIC2017 Clinical Target: Backed by the International Skin Imaging Collaboration, the ISIC2017 dataset offers a massive multi-class registry with an explicit emphasis on the structural traits of malignant melanoma to advance early clinical detection.
+
+---
+
+## Experimental Results & Quantitative Comparisons
+
+The SkinLesNet model demonstrates superior performance compared to traditional fine-tuned baseline architectures (VGG16 and ResNet50) across all target test datasets. 
+
+### 1. Performance on PAD-UFES-20-Modified Test Dataset
+This table tracks the performance breakdown on our primary smartphone-acquired clinical dataset.
+
+<div align="center">
+
+| Performance Metrics | Fine-Tuned VGG16 | Fine-Tuned ResNet50 | **Proposed SkinLesNet** |
+| :--- | :---: | :---: | :---: |
+| **Accuracy** | 79% | 82% | **96%** |
+| **Precision** | 80% | 85% | **97%** |
+| **Recall** | 75% | 75% | **92%** |
+| **F1-Score** | 72% | 75% | **92%** |
+
+</div>
+
+### 2. Performance on HAM10000 Test Dataset
+This table illustrates evaluation metrics on the large-scale, multi-class dermatoscopic repository.
+
+<div align="center">
+
+| Performance Metrics | Fine-Tuned VGG16 | Fine-Tuned ResNet50 | **Proposed SkinLesNet** |
+| :--- | :---: | :---: | :---: |
+| **Accuracy** | 75% | 80% | **90%** |
+| **Precision** | 75% | 80% | **89%** |
+| **Recall** | 70% | 72% | **87%** |
+| **F1-Score** | 70% | 71% | **85%** |
+
+</div>
+
+### 3. Performance on ISIC2017 Test Dataset
+This table shows verification data on the highly complex global diagnostic benchmark from the International Skin Imaging Collaboration.
+
+<div align="center">
+
+| Performance Metrics | Fine-Tuned VGG16 | Fine-Tuned ResNet50 | **Proposed SkinLesNet** |
+| :--- | :---: | :---: | :---: |
+| **Accuracy** | 70% | 75% | **92%** |
+| **Precision** | 70% | 75% | **80%** |
+| **Recall** | 70% | 65% | **82%** |
+| **F1-Score** | 72% | 70% | **75%** |
+
+</div>
+
+---
+
+## Citation
+```bibtex
+@article{azeem2024skinlesnet,
+  title={SkinLesNet: Classification of Skin Lesions and Detection of Melanoma Cancer Using a Novel Multi-Layer Deep Convolutional Neural Network},
+  author={Azeem, Muhammad and Kiani, Khurram Aurrangzeb and Mansouri, Tarik and Topping, Nicholas},
+  journal={Cancers},
+  volume={16},
+  number={1},
+  pages={108},
+  year={2024},
+  publisher={MDPI},
+  doi={10.3390/cancers16010108}
+}
+
