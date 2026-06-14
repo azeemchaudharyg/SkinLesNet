@@ -1,13 +1,13 @@
 # SkinLesNet: Classification of Skin Lesions and Detection of Melanoma Cancer Using a Novel Multi-Layer Deep Convolutional Neural Network
 
-<p align="center">
+<p align="left">
   <a href="https://www.mdpi.com/2072-6694/16/1" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Cancers-2024-blue" alt="Journal"></a>
   <a href="https://doi.org/10.3390/cancers16010108" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/DOI-10.3390%2Fcancers16010108-red" alt="DOI"></a>
   <a href="https://github.com/azeemchaudharyg/SkinLesNet/notebooks/SkinLesNet_Project.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Framework-TensorFlow%20%2F%20Keras-orange" alt="Implementation"></a>
-  <a href="LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
+  <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
 </p>
 
-Official repository accompanying the publication: **"SkinLesNet: Classification of Skin Lesions and Detection of Melanoma Cancer Using a Novel Multi-Layer Deep Convolutional Neural Network"** **Authors:** Muhammad Azeem, Khurram Kiani, Tarik Mansouri, and Nicholas Topping  
+Official repository accompanying the publication: **"SkinLesNet: Classification of Skin Lesions and Detection of Melanoma Cancer Using a Novel Multi-Layer Deep Convolutional Neural Network"**
 
 **Authors:** Muhammad Azeem, Kaveh Kiani, Taha Mansouri, and Nathan Topping
 
@@ -35,7 +35,7 @@ The processing engine behind **SkinLesNet** transforms raw dermoscopic input mat
 
 1. **Input Map Acquisition:** Standardizing dermoscopic inputs to uniform dimensions to mitigate capture variations.
 2. **Multi-Layer Convolutional Streams:** Iteratively stacking deep convolutional groups to map localized lesion edges, pigmentation boundaries, and global morphological contours.
-3. **Non-Linear Operations & Batch Control:** Applying optimized ReLU functions and synchronized Batch Normalization tiers to sustain fast training convergences without experiencing overfitting or internal covariate shifts.
+3. **Non-Linear Operations & Batch Control:** Applying optimized ReLU functions and synchronized Batch Normalization tiers to sustain fast training convergence without experiencing overfitting or internal covariate shifts.
 4. **Spatial Downsampling & Dense Classification:** Deploying MaxPooling matrices to aggregate feature hierarchies before passing the flattened structural vectors to fully connected dense layers and a softmax output classifier.
 
 <p align="center">
