@@ -39,8 +39,8 @@ The processing engine behind **SkinLesNet** transforms raw dermoscopic input mat
 4. **Spatial Downsampling & Dense Classification:** Deploying MaxPooling matrices to aggregate feature hierarchies before passing the flattened structural vectors to fully connected dense layers and a softmax output classifier.
 
 <p align="center">
-  <img src="images/skinlesnet_architecture.png" alt="SkinLesNet Architecture Diagram" width="800"><br>
-  <em>Figure: Layer configuration and algorithmic workflow of the proposed SkinLesNet model.</em>
+  <img src="utils/model.png" alt="SkinLesNet Architecture Diagram" width="800"><br>
+  <em>Proposed multi-layer deep CNN model architecture to classify different skin lesion categories.</em>
 </p>
 
 ---
@@ -49,7 +49,11 @@ The processing engine behind **SkinLesNet** transforms raw dermoscopic input mat
 
 We recommend managing project environment variables using Anaconda. The repository is configured and validated for Python 3.7+ running TensorFlow with a Keras backend.
 
-### 1. Create and Activate the Environment
 ```bash
 conda create -n skinlesnet python=3.7 -y
 conda activate skinlesnet
+```
+
+pip install tensorflow==2.4.1 keras==2.4.3
+pip install scikit-learn pandas numpy matplotlib opencv-python
+```
