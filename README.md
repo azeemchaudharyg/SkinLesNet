@@ -68,7 +68,7 @@ The research utilizes a modified **PAD-UFES-20** dataset containing clinical ima
 **Data Augmentation:** To mitigate severe class imbalances and data limitations, geometric data augmentation (random flips, rotations, and translations) was applied, expanding the final balanced evaluation pool to 520 melanoma, 408 nevus, and 386 seborrheic keratosis images.
 
 <p align="center">
-  <img src="utils/dist.png" alt="SkinLesNet Architecture Diagram" width="800"><br>
+  <img src="utils/dist.png" alt="SkinLesNet Architecture Diagram" width="500"><br>
   <em>Proposed multi-layer deep CNN model architecture to classify different skin lesion categories.</em>
 </p>
 
@@ -127,6 +127,8 @@ This table shows verification data on the highly complex global diagnostic bench
 ---
 
 ## Citation
+If you find our research useful in your work, please cite our paper:
+
 ```bibtex
 @article{azeem2024skinlesnet,
   title={SkinLesNet: Classification of Skin Lesions and Detection of Melanoma Cancer Using a Novel Multi-Layer Deep Convolutional Neural Network},
