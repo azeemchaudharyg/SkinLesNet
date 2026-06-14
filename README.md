@@ -3,7 +3,7 @@
 <p align="left">
   <a href="https://www.mdpi.com/2072-6694/16/1" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Cancers-2024-blue" alt="Journal"></a>
   <a href="https://doi.org/10.3390/cancers16010108" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/DOI-10.3390%2Fcancers16010108-red" alt="DOI"></a>
-  <a href="https://github.com/azeemchaudharyg/SkinLesNet/notebooks/SkinLesNet_Project.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Framework-TensorFlow%20%2F%20Keras-orange" alt="Implementation"></a>
+  <a href="https://github.com/azeemchaudharyg/SkinLesNet/blob/main/notebooks/SkinLesNet_Project.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Framework-TensorFlow%20%2F%20Keras-orange" alt="Implementation"></a>
   <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
 </p>
 
