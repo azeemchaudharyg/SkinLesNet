@@ -69,7 +69,7 @@ The research utilizes a modified **PAD-UFES-20** dataset containing clinical ima
 
 <p align="center">
   <img src="utils/dist.png" alt="SkinLesNet Architecture Diagram" width="500"><br>
-  <em>Proposed multi-layer deep CNN model architecture to classify different skin lesion categories.</em>
+  <em>The pie chart highlights the distribution of different skin-lesion classes within the PAD-UFES-20-Modified dataset, and shows that in this dataset there is no significant class imbalance.</em>
 </p>
 
 To further validate generalizability, the primary study was augmented with two widely benchmarked, public dermatoscopic databases: **HAM10000** and **ISIC2017**.
