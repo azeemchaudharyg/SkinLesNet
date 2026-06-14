@@ -130,15 +130,15 @@ This table shows verification data on the highly complex global diagnostic bench
 If you find our research useful in your work, please cite our paper:
 
 ```bibtex
-@article{azeem2024skinlesnet,
-  title={SkinLesNet: Classification of Skin Lesions and Detection of Melanoma Cancer Using a Novel Multi-Layer Deep Convolutional Neural Network},
-  author={Azeem, Muhammad and Kiani, Khurram Aurrangzeb and Mansouri, Tarik and Topping, Nicholas},
+@article{azeem2023skinlesnet,
+  title={SkinLesNet: classification of skin lesions and detection of melanoma cancer using a novel multi-layer deep convolutional neural network},
+  author={Azeem, Muhammad and Kiani, Kaveh and Mansouri, Taha and Topping, Nathan},
   journal={Cancers},
   volume={16},
   number={1},
   pages={108},
-  year={2024},
-  publisher={MDPI},
+  year={2023},
+  publisher={MDPI}
   doi={10.3390/cancers16010108}
 }
 
