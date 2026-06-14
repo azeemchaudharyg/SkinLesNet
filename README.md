@@ -53,7 +53,7 @@ We recommend managing project environment variables using Anaconda. The reposito
 conda create -n skinlesnet python=3.7 -y
 conda activate skinlesnet
 ```
-
+```
 pip install tensorflow==2.4.1 keras==2.4.3
 pip install scikit-learn pandas numpy matplotlib opencv-python
 ```
